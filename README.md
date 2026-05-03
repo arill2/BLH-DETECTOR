@@ -36,3 +36,24 @@ Dirancang khusus untuk **bug bounty hunter** dan **security researcher** yang in
 
 ```bash
 pip install requests beautifulsoup4 tldextract colorama dnspython python-whois
+
+```bash
+Scan dari file subdomain
+python blh_scanner.py --file subdomains.txt
+
+```bash
+Scan single target
+python blh_scanner.py --url https://target.com --depth 3
+
+```bash
+Full command (rekomendasi)
+python blh_scanner.py \
+  --file subdomains.txt \
+  --depth 2 \
+  --threads 5 \
+  --whois \
+  --html-output report.html
+
+```bash
+Resume scan (jika terputus)
+python blh_scanner.py --file subdomains.txt --resume state.json
